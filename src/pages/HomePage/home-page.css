@@ -1,0 +1,210 @@
+.home-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 50%, #0f0f1e 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.stars-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+.content-container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-container {
+    animation: fadeInDown 1s ease-out;
+}
+
+.main-title {
+    margin: 0;
+    font-size: 4em;
+    font-weight: 900;
+    background: linear-gradient(135deg, #00d4ff 0%, #0099ff 50%, #6600ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 4px;
+    text-shadow: 0 8px 16px rgba(0, 150, 255, 0.3);
+}
+
+.tagline {
+    font-size: 1.2em;
+    color: #00d4ff;
+    margin-top: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.home-card {
+    background: linear-gradient(135deg, rgba(0, 150, 255, 0.1) 0%, rgba(102, 0, 255, 0.1) 100%);
+    border: 2px solid #00d4ff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 8px 32px rgba(0, 150, 255, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.home-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% -50%, rgba(0, 212, 255, 0.3), transparent 70%);
+    pointer-events: none;
+}
+
+.home-card:hover {
+    transform: translateY(-15px);
+    border-color: #00ffff;
+    box-shadow: 0 20px 50px rgba(0, 212, 255, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+.card-top {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+}
+
+.icon-wrapper {
+    font-size: 5em;
+    margin-bottom: 20px;
+    display: inline-block;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+.home-card h2 {
+    font-size: 1.8em;
+    margin: 0;
+    color: #00d4ff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.card-description {
+    font-size: 1em;
+    color: #b0d4ff;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.primary-button {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+    border: none;
+    color: white;
+    padding: 15px 45px;
+    font-size: 1.1em;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 8px 20px rgba(0, 150, 255, 0.3);
+    position: relative;
+    z-index: 3;
+}
+
+.primary-button:hover {
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.5);
+}
+
+.primary-button:active {
+    transform: scale(0.95);
+}
+
+.footer-info {
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.info-text {
+    font-size: 1em;
+    color: #00d4ff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+}

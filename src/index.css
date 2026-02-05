@@ -1,6 +1,21 @@
-/* Basic cleanup so things don't look broken */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: sans-serif;
-  margin: 2rem;
-  background-color: #f0f0f0;
+  font-family: 'Arial Black', Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: 'Arial Black', Arial, sans-serif;
+  cursor: pointer;
 }
